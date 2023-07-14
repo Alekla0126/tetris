@@ -1,27 +1,18 @@
-name: Build and Deploy
-
+name: Flutter Web Deploy
 on:
   push:
     branches:
-      - main  # Adjust the branch name if needed
-
+      - main
 jobs:
-  build:
+  build:    
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Set up Flutter
-        uses: subosito/flutter-action@v2
-        with:
-          flutter-version: 2.x  # Adjust Flutter version if needed
-
-      - name: Build web
-        run: flutter build web
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          publish_dir: ./build/web
+      - uses: actions/checkout@v3
+      - uses: subosito/flutter-action@v2
+      - run: flutter build web --release --base-href /flutter_web/
+      - run: git config user.name github-actions
+      - run: git config user.email github-actions@github.com
+      - run: git --work-tree build/web add --all
+      - run: git commit -m "Automatic deployment by github-actions"
+      - run: git push origin HEAD:gh-pages --force
