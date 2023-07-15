@@ -15,4 +15,6 @@ jobs:
       - run: git config user.email github-actions@github.com
       - run: git --work-tree build/web add --all
       - run: git commit -m "Automatic deployment by github-actions"
-      - run: git push origin HEAD:gh-pages --force
+      - run: git push origin HEAD:gh-pages --force --quiet
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
