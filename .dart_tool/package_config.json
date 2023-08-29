@@ -51,7 +51,7 @@
     },
     {
       "name": "collection",
-      "rootUri": "file:///Users/alejandro/.pub-cache/hosted/pub.dev/collection-1.17.1",
+      "rootUri": "file:///Users/alejandro/.pub-cache/hosted/pub.dev/collection-1.17.2",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
@@ -159,7 +159,7 @@
     },
     {
       "name": "intl",
-      "rootUri": "file:///Users/alejandro/.pub-cache/hosted/pub.dev/intl-0.18.0",
+      "rootUri": "file:///Users/alejandro/.pub-cache/hosted/pub.dev/intl-0.18.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -183,15 +183,15 @@
     },
     {
       "name": "matcher",
-      "rootUri": "file:///Users/alejandro/.pub-cache/hosted/pub.dev/matcher-0.12.15",
+      "rootUri": "file:///Users/alejandro/.pub-cache/hosted/pub.dev/matcher-0.12.16",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "material_color_utilities",
-      "rootUri": "file:///Users/alejandro/.pub-cache/hosted/pub.dev/material_color_utilities-0.2.0",
+      "rootUri": "file:///Users/alejandro/.pub-cache/hosted/pub.dev/material_color_utilities-0.5.0",
       "packageUri": "lib/",
-      "languageVersion": "2.13"
+      "languageVersion": "2.17"
     },
     {
       "name": "meta",
@@ -333,9 +333,9 @@
     },
     {
       "name": "source_span",
-      "rootUri": "file:///Users/alejandro/.pub-cache/hosted/pub.dev/source_span-1.9.1",
+      "rootUri": "file:///Users/alejandro/.pub-cache/hosted/pub.dev/source_span-1.10.0",
       "packageUri": "lib/",
-      "languageVersion": "2.14"
+      "languageVersion": "2.18"
     },
     {
       "name": "stack_trace",
@@ -363,7 +363,7 @@
     },
     {
       "name": "test_api",
-      "rootUri": "file:///Users/alejandro/.pub-cache/hosted/pub.dev/test_api-0.5.1",
+      "rootUri": "file:///Users/alejandro/.pub-cache/hosted/pub.dev/test_api-0.6.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
@@ -384,6 +384,12 @@
       "rootUri": "file:///Users/alejandro/.pub-cache/hosted/pub.dev/visibility_detector-0.3.3",
       "packageUri": "lib/",
       "languageVersion": "2.12"
+    },
+    {
+      "name": "web",
+      "rootUri": "file:///Users/alejandro/.pub-cache/hosted/pub.dev/web-0.1.4-beta",
+      "packageUri": "lib/",
+      "languageVersion": "3.1"
     },
     {
       "name": "webview_flutter",
@@ -440,7 +446,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2023-07-14T10:51:51.507425Z",
+  "generated": "2023-08-29T13:03:30.488160Z",
   "generator": "pub",
-  "generatorVersion": "3.0.6"
+  "generatorVersion": "3.1.0"
 }

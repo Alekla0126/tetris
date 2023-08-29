@@ -13,10 +13,20 @@ class PageLand extends StatelessWidget {
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
-              Expanded(
+              const Expanded(
+                child: Column(
+                  children: <Widget>[
+                    Spacer(),
+                    DirectionController(),
+                    SizedBox(height: 30),
+                  ],
+                ),
+              ),
+              _ScreenDecoration(child: Screen.fromHeight(height * 0.8)),
+              const Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const <Widget>[
+                  children: <Widget>[
                     Spacer(),
                     SystemButtonGroup(),
                     Spacer(),
@@ -24,16 +34,6 @@ class PageLand extends StatelessWidget {
                       padding: EdgeInsets.only(left: 40, bottom: 40),
                       child: DropButton(),
                     )
-                  ],
-                ),
-              ),
-              _ScreenDecoration(child: Screen.fromHeight(height * 0.8)),
-              Expanded(
-                child: Column(
-                  children: <Widget>[
-                    const Spacer(),
-                    DirectionController(),
-                    const SizedBox(height: 30),
                   ],
                 ),
               ),

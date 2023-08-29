@@ -22,8 +22,8 @@ class GameController extends StatelessWidget {
         ),
         SizedBox(
           height: screenHeight/3,
-          child: Row(
-            children: const <Widget>[
+          child: const Row(
+            children: <Widget>[
               Expanded(child: DirectionController()),
               Expanded(child: RotateButton()),
             ],
@@ -202,9 +202,9 @@ class RotateButton extends StatelessWidget {
   const RotateButton({super.key});
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       mainAxisSize: MainAxisSize.min,
-      children: const <Widget>[
+      children: <Widget>[
         Expanded(
           child: Center(
             child: DropButton(),
