@@ -1,0 +1,42 @@
+name: Deploy Flutter Web App to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Build and Deploy
+    runs-on: ubuntu-latest
+
+    env:
+      FLUTTER_CHANNEL: stable
+      FLUTTER_VERSION: '3.27.0'
+      APP_NAME: ${{ github.repository }}
+      BASE_HREF: "/tetris/"
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Install Flutter
+      uses: subosito/flutter-action@v2
+      with:
+        flutter-version: ${{ env.FLUTTER_VERSION }}
+        channel: ${{ env.FLUTTER_CHANNEL }}
+
+    - name: Set up environment
+      run: flutter config --enable-web
+
+    - name: Install dependencies
+      run: flutter pub get
+
+    - name: Build the web app
+      run: flutter build web --web-renderer html --release --base-href="${{ env.BASE_HREF }}" 
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: build/web
